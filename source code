@@ -1,0 +1,73 @@
+public static void main(String[] args) {
+    Scanner sc= new Scanner(System.in);
+    double harga, total, diskon, totalakhir = 0, uang = 0, kembalian;
+    int jumlah;
+
+    System.out.println("PROGRAM IF ELSE");
+    System.out.println("++++++++++++++++++++++++++");
+
+    System.out.print("jumlah =");
+    jumlah= sc.nextInt();
+
+    System.out.print("harga  =");
+    harga= sc.nextDouble();
+
+    total=jumlah*harga;
+    System.out.println("total  =" + total);
+
+    System.out.println("++++++++++++++++++++++++++");
+
+        if(total<100000){
+            diskon=0;  
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+
+        }else if(total>=100001&&total<=200000){
+            diskon= total*0.05;
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+
+        }else if(total>=200001&&total<=300000){ 
+            diskon = 0.1*total;
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+
+        }else if(total>=300001&&total<=400000){
+            diskon = total*0.15;
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+
+        }else if(total>=400001&&total<=500000){
+            diskon = 0.2*total;
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+
+        }else if(total>500001){
+            diskon = 0.25*total;
+            System.out.println("diskon      =" +diskon);
+            totalakhir= total-diskon;
+            System.out.println("totalakhir  =" + totalakhir);
+        }
+
+       System.out.println("++++++++++++++++++++++++++");
+
+       System.out.print("uang yang dibayarkan=" );
+       uang= sc.nextInt();
+       if (uang==totalakhir){
+           System.out.println("uang pas");
+       } else{
+           kembalian= uang-totalakhir;
+           System.out.println("kembalian=" +kembalian);
+       }
+
+       System.out.println("+++++++TERIMA KASIH+++++++");
+
+
+
+}
+}
